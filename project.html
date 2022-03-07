@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="left-side">
+            <img src="img/logodumbways.png">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">My Project</a></li>
+            </ul>
+        </div>
+
+        <div class="right-side">
+            <a href="form.html">Contact Me</a>
+        </div>
+    </nav>
+
+    <div class="myproject">
+    <div class="container-main">
+    <form onsubmit="event.preventDefault(); addBlog(event); getDuration();" style="margin: auto;
+    width:400px;
+    margin-top: 1%;">
+
+    <div>
+    <h2 style="
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 800;margin-bottom: 10px;">Add My Project</h2>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+    <label for="project-name" style="font-size: 20px;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;">Project Name</label>
+
+    <input id="project-name" type="text" style="
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 0px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 10px #a19f9f;">
+    </div>
+
+    <table style="width:100%;">
+    <tr>
+        <td><label for="start-date" style="font-size: 20px;
+        font-weight: 600;
+        font-family:Arial, Helvetica, sans-serif;">Start Date</label>
+        </td>
+    
+        <td>
+        <label for="end-date" style="font-size: 20px;
+        font-weight: 600;
+        font-family:Arial, Helvetica, sans-serif;">End Date</label>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <input type="date" id="startDate" style="
+            width: 85%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: 0px;
+            background-color: #ffffff;
+            box-shadow: 0px 3px 10px #a19f9f;">
+            </td>
+        <td>
+            <input type="date" id="endDate" style="
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: 0px;
+            background-color: #ffffff;
+            box-shadow: 0px 3px 10px #a19f9f;">
+        </td>
+    </tr>
+</table>
+
+    <div style="margin-bottom: 10px;">
+    <label for="description" style="font-size: 20px;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;">Description</label>
+    <textarea id="input-description" cols="30" rows="10" style="
+    width: 415.5px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 0px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 10px #a19f9f;
+    resize: none;"></textarea>
+    </div>
+
+    <div style="margin-bottom: 25px; margin-top: 20px;">
+    <label for="description" style="font-size: 20px;font-weight: 600;font-family:Arial, Helvetica, sans-serif;">Technologies</label>
+    
+    
+    <div style="margin-top: 20px; margin-bottom: 25px;" class="cb">
+        <input type="checkbox" id="nodeJs" value="nodeJs" class="checkbox">
+        <label for="nodeJs" class="label-checkbox" style="margin-right:104px">Node Js</label>
+
+        <input type="checkbox" id="nextJs" value="nextJs"  class="checkbox">
+        <label for="nextJs" class="label-checkbox">Next Js</label>
+    </div>
+
+    <div class="cb">
+        <input type="checkbox" id="reactJs" value="reactJs"  class="checkbox">
+        <label for="reactJs" class="label-checkbox">React Js</label>
+
+        <input type="checkbox" id="typeScript" value="typeScript"  class="checkbox">
+        <label for="typeScript" class="label-checkbox">TypeScript</label>
+    </div>
+   
+
+    <div style="margin-bottom: 10px;margin-top: 30px;">
+        <label for="image" style="font-size: 20px;
+        font-weight: 600;
+        font-family:Arial, Helvetica, sans-serif;">Upload Image</label>
+        <input type="file" id="upload-image" accept="image/ " class="choose-image">
+    </div>
+
+    <div class="button-group">
+    <button style="
+    margin-left:77%;
+    margin-top: 20px;
+    width: 28%;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #212336;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 550;"  type="button" onclick="event.preventDefault(); addBlog(); getDuration();">Submit</button>
+    </div>
+</form>
+
+</div>
+</div>
+
+
+<h1 style="text-align: center;margin-top: 40px;margin-bottom: 3%;">MY PROJECT</h1>
+<!-- contents -->
+<div class="container-project" id="container-project">
+    </div>
+<script src="project.js"></script>
+</body>
+</html>
